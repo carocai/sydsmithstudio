@@ -1,0 +1,104 @@
+:root {
+  --gap: 24px;
+  --content-gap: 20px;
+  --nav-width: 1024px;
+  --header-height: 50px;
+  --footer-height: 60px;
+  --radius: 8px;
+  --theme: rgb(255, 255, 255);
+  --entry: #F5f5f5;
+  --content: rgb(31, 31, 31);
+  --hljs-bg: rgb(28, 29, 33);
+  --code-bg: rgb(245, 245, 245);
+  --border: rgb(238, 238, 238)
+}
+
+.main {
+  position: relative;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  max-width: calc(1100px + var(--gap) * 2);
+  margin: auto;
+  padding: var(--gap)
+}
+
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-rows: 120px;
+  gap: 5px;
+}
+
+.gallery-item {
+  overflow: visible;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  grid-column: span 2;
+  grid-row: span 2;
+  padding:10px;
+  margin:auto;
+  width:80%;
+}
+
+/* Caption styling */
+.caption {
+  margin: 10px;
+  font-size: 1.6rem;
+  color: #333;
+  text-align: center;
+  word-wrap:break-word;
+  line-height: 110%;
+  font-family: libre;
+}
+
+/* Image styles */
+.gallery-item img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+ 
+}
+
+.gallery-item.horizontal {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.gallery-item.vertical {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+@media (max-width: 600px) {
+  .caption{
+    font-size: 1.4em;
+  }
+  .gallery {
+    display: block; /* Disable grid layout on small screens */
+  }
+
+  .gallery-item {
+    width: 100%;
+    margin-bottom: 16px;
+    height: auto; /* Let the height be determined by the image */
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Remove grid spans on small screens */
+  .gallery-item.horizontal,
+  .gallery-item.vertical {
+    grid-column: unset;
+    grid-row: unset;
+  }
+}

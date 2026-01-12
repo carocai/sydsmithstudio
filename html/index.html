@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <title>Sydney Smith</title>
+  </head>
+  <body>
+    <nav>
+      
+      <div class="name"><a href="/html/index.html" class="name">Sydney Smith</a></div>
+      
+      <div style="float:right;margin-right:10px;">
+        <div class="bar-item" ><a href="/html/index.html" class="button bar-item">Home</a></div>
+        <div class="bar-item" ><a href="/html/projects.html" class="button bar-item">Projects</a></div>
+        <div class="bar-item" ><a href="/html/cv.html" class="button bar-item">C.V.</a></div> 
+        <div class="bar-item" ><a href="/html/artiststatement.html" class="button bar-item">Artist Statement</a></div>  
+      </div>
+      
+    </nav>
+
+<div class="main">
+  <div class="column" style="width:50%">
+    <header class="page-header">
+    <h1 class="page-header" style="text-align: left;">Sydney Smith</h1>
+  </header>
+    
+    
+    <div class="content" style="align-items: center;">
+    <dfn style="color: var(--secondary)">contact : <a href="mailto:ssydney393@gmail.com">ssydney393@gmail.com</a></dfn>
+    <br><br>
+    <p class="paragraph">Smith’s large scale wooden sculptures are a means to question her place within the world. Her practice began by walking through forest and natural spaces, moving slowly to notice small details, to exist in an ecosystem that feels bigger than herself. Inspired by these journeys, her recent sculptural thesis involves carving large felled trees, exploring themes of interdependency and trust, considering the material as a body of its own. Manipulating wood in large raw forms into positions and bends that defy expectations, she plays with physical and metaphorical extremes, such as tension, compression, and the persistence of gravity. </p>
+    <p class="paragraph">Through these relatively simple subtractive acts upon the material, it transforms into something evoking empathy and drawing out deeper emotional connections. Smith takes time with each piece, allowing the wood to carry a story of its own in conversation with her own narrative. Many of her forms take on gestural shapes, lending the wood a distinctly human, bodily feel and drawing in the viewer to experience their own form and gesture alongside the wood itself.</p>
+    </div>
+  </div>
+
+  
+  <div class="column">
+  <div class="slideshow-container">
+    <div class="mySlides">
+        <img src="/images/reciprocity/GalleryShot.jpg"
+        style="width:100%">
+        <img src="/images/2by/2by(1).jpg"
+        style="width:100%">
+
+    </div>
+        
+        
+  </div>
+
+    
+    <br><h3 style="color:var(--secondary);">Documentary on <dfn>Reciprocity</dfn> by Ian Stein</h3><br>
+  <iframe title="vimeo-player" src="https://player.vimeo.com/video/1079032612?h=a0bcb50103" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+
+    </div>
+</div>
+    <script>
+        // Automatic Slideshow - change image every 3 seconds
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 3000);
+        }
+    </script>
+
+    <footer class="center">
+      <a href="#" class="bar-item"><i class="fa fa-instagram"></i></a>
+      <a href="#" class="bar-item"><i class="fa fa-linkedin"></i></a>
+    </footer>
+  </body>
+</html>
